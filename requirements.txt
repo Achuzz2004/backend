@@ -23,9 +23,10 @@ sqlparse==0.4.3
 threadpoolctl==3.6.0
 tzdata==2022.7
 urllib3==1.26.13
-gunicon
+gunicorn
 dj-database-url 
 psycopg2-binary
 whitenoise
 django-cloudinary-storage
 dj_database_url
+
