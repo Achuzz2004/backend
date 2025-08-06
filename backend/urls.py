@@ -23,7 +23,7 @@ api_patterns = [
 ]
 
 urlpatterns = [
-    path(getenv('ADMIN_URL'), admin.site.urls),
+    path('admin/', admin.site.urls),
     path('api/', include(api_patterns))
 ]
 
