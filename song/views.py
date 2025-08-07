@@ -12,6 +12,16 @@ from .serializers import (
 )
 from .serializers import PlayListDetailSerializer
 from .recommendations import reccomend_for_user
+
+from django.http import HttpResponse
+from django.core.management import call_command
+
+def migrate(request):
+    try:
+        call_command('loaddata','data.json')
+        return HttpResponse("Data import")
+    except Exception as e:
+        return HttpResponse(e)
 # Create your views here.
 
 class PlaylistListAV(ListCreateAPIView):
