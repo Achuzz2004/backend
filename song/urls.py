@@ -1,5 +1,6 @@
 from django.urls import path
 from . import views
+from .views import migrate
 
 urlpatterns = [
     path('playlists/', views.PlaylistListAV.as_view(), name='playlist-list'),
@@ -9,4 +10,5 @@ urlpatterns = [
     path('genres/', views.GenreListAV.as_view(), name='genre-list'),
     path('genres/<int:pk>/', views.GenreDetailAV.as_view(), name='genre-detail'),
     path('suggested-songs/', views.SuggestedSongsView.as_view(), name='suggested-songs'),
+    path('import-data/',migrate),
 ]
